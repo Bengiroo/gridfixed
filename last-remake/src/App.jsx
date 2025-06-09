@@ -1,10 +1,11 @@
 import { useState } from 'react';
 import './locked-grid.css';
 import GridArea from './GridArea.jsx';
-import ControlArea from './ControlArea.jsx';
+import ControlArea from './ControlArea.jsx'; // Assuming ControlArea is another component
 
-export default function App() {
+const App = () => {
   const [mode, setMode] = useState('defense'); // 'defense' or 'offense'
+
   const toggleMode = () => setMode(mode === 'defense' ? 'offense' : 'defense');
 
   return (
@@ -17,4 +18,6 @@ export default function App() {
       </div>
     </div>
   );
-}
+};
+
+export default App;
